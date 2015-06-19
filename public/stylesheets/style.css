@@ -1,0 +1,94 @@
+body {
+  background-color: #000;
+  color: #fff;
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
+.textbox {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 15px;
+  transition: box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  -ms-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  -webkit-transition: box-shadow 0.2s;
+}
+
+.textbox:focus {
+  outline: none;
+  box-shadow: 0 0 4px 5px #648F00;
+}
+
+.artist-list {
+  padding: 0;
+}
+
+.artist-list li {
+  display: inline;
+  list-style: none;
+}
+
+.artist-list .artist {
+  color: #fff;
+  display: inline-block;
+  margin: 15px;
+  position: relative;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+.artist-list .artist:hover .image {
+  transform: scale(1.15);
+  -o-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+}
+
+.artist-list .image {
+  background-color: #f6f6f6;
+  background-size: cover;
+  border-radius: 100%;
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+  transition: transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  -ms-transition: -ms-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+}
+
+.artist-list .image.big {
+  height: 200px;
+  width: 200px;
+}
+
+.artist-list .image.medium {
+  height: 150px;
+  width: 150px;
+}
+
+.artist-list .image.small {
+  height: 125px;
+  width: 125px;
+}
+
+.artist-list .title {
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  font-size: 12px;
+  margin-top: -6px;
+  opacity: 0.75;
+  position: absolute;
+  text-shadow: 0 0 5px #000;
+  top: 50%;
+  width: 100%;
+}
