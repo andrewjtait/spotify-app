@@ -7,7 +7,7 @@ A playground to learn more about:
 * Mongo DB
 * React JS
 
-## To Run
+## To run the app
 
 To run the app:
 
@@ -17,3 +17,9 @@ npm start
 ```
 
 `npm start` will compile the JS and run the server on http://localhost:3000/ (it will also continue to watch the JS for any changes).
+
+## To run the tests
+
+```sh
+npm test
+```
