@@ -7,7 +7,8 @@
     "watchify": "watchify components/app-browser.js -o public/javascripts/app.js",
     "debug": "npm run watchify & node debug ./bin/www",
     "start": "npm run watchify & node ./bin/www",
-    "test": "mocha --compilers js:babel/register --recursive"
+    "test": "istanbul cover _mocha -- --compilers js:babel/register --recursive",
+    "posttest": "istanbul check-coverage"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "babel": "^5.5.8",
     "browserify": "^10.2.4",
+    "istanbul": "^0.3.15",
     "jsdom": "^3.1.2",
     "mocha": "^2.2.5",
     "react-tools": "^0.13.3",
