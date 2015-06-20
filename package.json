@@ -36,7 +36,7 @@
     ]
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/test-preprocessor.js",
+    "scriptPreprocessor": "<rootDir>/bin/test-preprocessor.js",
     "collectCoverage": true,
     "testFileExtensions": [
       "js"
