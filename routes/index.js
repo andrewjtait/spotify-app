@@ -9,6 +9,11 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res) {
   var q = req.body.query;
 
+  if (q == '') {
+    res.redirect("/");
+    return;
+  }
+
   var opts = {
     url: "https://api.spotify.com/v1/search?q=" + q + "&type=artist",
     json: true
