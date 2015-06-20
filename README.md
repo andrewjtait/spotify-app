@@ -1,6 +1,6 @@
 # spotify-app
 
-[![Build Status](https://codeship.com/projects/83a0a150-f9a3-0132-893e-228d89dce612/status?branch=master)](https://codeship.com/projects/86841)
+[![Build Status](https://travis-ci.org/andrewjtait/spotify-app.svg?branch=master)](https://travis-ci.org/andrewjtait/spotify-app)
 
 A playground to learn more about:
 
