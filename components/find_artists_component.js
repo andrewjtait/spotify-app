@@ -25,7 +25,7 @@ var FindArtistsComponent = React.createClass({
    * @param {String} query
    */
   findArtists: function(query) {
-    if (query == "") { return; } // return early if no query is entered
+    if (query == null || query == "") { return; } // return early if no query is entered
 
     var url = 'https://api.spotify.com/v1/search?q=' + query + '&type=artist';
 

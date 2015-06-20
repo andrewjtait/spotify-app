@@ -1,7 +1,8 @@
+jest.dontMock('../../components/artist.js');
+
 var Artist = require('../../components/artist.js');
 
 var React = require('react/addons');
-var assert = require('assert');
 var TestUtils = React.addons.TestUtils;
 
 describe('Artist component', function() {
@@ -16,11 +17,11 @@ describe('Artist component', function() {
   });
 
   it('renders an anchor with href from the props', function() {
-    assert(this.anchor.getAttribute('href') == '/foo');
+    expect(this.anchor.getAttribute('href')).toEqual('/foo');
   });
 
   it('renders the title from the props', function() {
-    assert(this.title.innerHTML == 'Fleetwood Mac');
+    expect(this.title.innerHTML).toEqual('Fleetwood Mac');
   });
 
   describe('without images', function() {
@@ -33,7 +34,7 @@ describe('Artist component', function() {
     });
 
     it('renders the correct CSS for the image', function() {
-      assert(this.image.getAttribute('style') == 'background-image:none;');
+      expect(this.image.getAttribute('style')).toEqual('background-image:none;');
     });
   });
 
@@ -47,7 +48,7 @@ describe('Artist component', function() {
     });
 
     it('renders the correct CSS for the image', function() {
-      assert(this.image.getAttribute('style') == 'background-image:url(/foo.jpg);');
+      expect(this.image.getAttribute('style')).toEqual('background-image:url(/foo.jpg);');
     });
   });
 });
