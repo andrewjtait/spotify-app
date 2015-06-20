@@ -66,21 +66,6 @@ body {
   -webkit-transition: -webkit-transform 0.2s ease-out;
 }
 
-.artist-list .image.big {
-  height: 200px;
-  width: 200px;
-}
-
-.artist-list .image.medium {
-  height: 150px;
-  width: 150px;
-}
-
-.artist-list .image.small {
-  height: 125px;
-  width: 125px;
-}
-
 .artist-list .title {
   -webkit-font-smoothing: antialiased;
   display: block;

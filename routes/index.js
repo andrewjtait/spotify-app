@@ -1,27 +1,12 @@
 var express = require('express');
-var request = require('request');
 var router = express.Router();
+var JSX = require('node-jsx').install();
+var React = require('react');
+var ReactApp = React.createFactory(require('../components/app-server.js'));
 
 router.get('/', function(req, res, next) {
-  res.render('index', { q: '', artists: [] });
-});
-
-router.post('/', function(req, res) {
-  var q = req.body.query;
-
-  if (q == '') {
-    res.redirect("/");
-    return;
-  }
-
-  var opts = {
-    url: "https://api.spotify.com/v1/search?q=" + q + "&type=artist",
-    json: true
-  };
-
-  request.get(opts, function(error, response, body) {
-    res.render('index', { q: q, artists: body.artists.items });
-  });
+  var markup = React.renderToString(ReactApp());
+  res.render('index', { markup: markup });
 });
 
 module.exports = router;

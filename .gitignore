@@ -2,3 +2,4 @@
 data/**/*
 npm-debug.log
 node_modules/**/*
+public/javascripts/app.js

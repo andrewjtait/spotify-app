@@ -1,36 +1,5 @@
 extends layout
 
 block content
-  form(name="artist", method="post", action="/")
-    input.textbox(type='text', name='query', value='#{q}', placeholder='Search Spotify', autofocus)
-
-  ul.artist-list
-
-    // n tracks when the next break point should be
-    - var n = 0
-    // z tracks our position in the triangular number sequence
-    - var z = 1
-
-    each artist, i in artists
-      li
-        a.artist(href='#{artist.external_urls.spotify}', target='_blank')
-          - var klass = "image"
-          case z
-            when 1
-              - klass = "image big"
-            when 2
-              - klass = "image medium"
-            when 3
-              - klass = "image small"
-
-          - if (artist.images.length)
-            div(class='#{klass}', style='background-image: url(#{artist.images[1].url})')
-          - else
-            div(class='#{klass}')
-          span.title #{artist.name}
-
-        - if (i == n)
-          div.clear
-          // calculate triangular number sequence for when the next break should be
-          - z++
-          - n = (z * (z + 1) / 2) - 1
+  div#app
+    !{markup}
