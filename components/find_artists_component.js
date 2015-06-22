@@ -1,5 +1,4 @@
 var React = require('react');
-var $ = require('jquery');
 var SearchForm = require('./search_form.js');
 var SearchResults = require('./search_results.js');
 
@@ -25,20 +24,22 @@ var FindArtistsComponent = React.createClass({
    * @param {String} query
    */
   findArtists: function(query) {
-    if (query == null || query == "") { return; } // return early if no query is entered
+    if (query == null || query == "") { return false; } // return early if no query is entered
 
     var url = 'https://api.spotify.com/v1/search?q=' + query + '&type=artist';
 
-    $.ajax({
-      url: url,
-      dataType: 'json',
-      success: function(data) {
-        this.setState({ results: data.artists.items });
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(url, status, err.toString());
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          var data = JSON.parse(xhr.responseText);
+          this.setState({ results: data.artists.items });
+        }
       }
-    });
+    }.bind(this);
+
+    xhr.send();
   },
 
   /**

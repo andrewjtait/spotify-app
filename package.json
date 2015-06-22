@@ -7,7 +7,10 @@
     "watchify": "watchify components/app-browser.js -o public/javascripts/app.js",
     "debug": "npm run watchify & node debug ./bin/www",
     "start": "npm run watchify & node ./bin/www",
-    "test": "jest"
+    "test:debug": "mocha --compilers js:babel/register --recursive debug",
+    "test:watch": "mocha --compilers js:babel/register --recursive -w",
+    "test": "istanbul cover _mocha -- --compilers js:babel/register --recursive",
+    "posttest": "istanbul check-coverage"
   },
   "dependencies": {
     "body-parser": "~1.12.4",
@@ -15,38 +18,26 @@
     "debug": "~2.2.0",
     "express": "~4.12.4",
     "jade": "~1.9.2",
-    "jquery": "^2.1.4",
+    "morgan": "^1.6.0",
     "node-jsx": "^0.13.3",
     "react": "^0.13.3",
     "request": "^2.58.0"
   },
   "devDependencies": {
+    "babel": "^5.6.1",
     "browserify": "^10.2.4",
+    "chai": "^3.0.0",
     "istanbul": "^0.3.15",
-    "jest-cli": "^0.4.13",
     "jsdom": "^3.1.2",
     "mocha": "^2.2.5",
     "react-tools": "^0.13.3",
     "reactify": "^1.1.1",
+    "sinon": "^1.15.3",
     "watchify": "^3.2.2"
   },
   "browserify": {
     "transform": [
       "reactify"
-    ]
-  },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/bin/test-preprocessor.js",
-    "collectCoverage": true,
-    "testFileExtensions": [
-      "js"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
-    ],
-    "unmockedModulePathPatterns": [
-      "react"
     ]
   }
 }
