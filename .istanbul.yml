@@ -5,5 +5,5 @@ check:
     branches: 100
     functions: 100
 instrumentation:
-  root: .
-  extensions: ['.js', '.jsx']
+  root: './components'
+  extensions: ['.jsx']
