@@ -1,4 +1,4 @@
-var Artist = require('../../components/artist.js');
+var Artist = require('../../components/artist.jsx');
 
 var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;

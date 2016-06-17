@@ -1,9 +1,9 @@
-var Component = require('../../components/find_artists_component.js');
+var Component = require('../../components/find_artists_component.jsx');
 
 var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;
-var SearchResults = require('../../components/search_results.js');
-var SearchForm = require('../../components/search_form.js');
+var SearchResults = require('../../components/search_results.jsx');
+var SearchForm = require('../../components/search_form.jsx');
 
 describe('Find Artists Component', function() {
   beforeEach(function() {

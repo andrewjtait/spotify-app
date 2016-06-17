@@ -2,7 +2,7 @@
 // to the DOM so can be used for server rendering.
 
 var React = require('react');
-var FindArtistsComponent = require('./find_artists_component.js');
+var FindArtistsComponent = require('./find_artists_component.jsx');
 
 /**
  * The constructor for the app.

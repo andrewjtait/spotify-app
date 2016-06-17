@@ -1,4 +1,4 @@
-var Component = require('../../components/search_form.js');
+var Component = require('../../components/search_form.jsx');
 
 var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;

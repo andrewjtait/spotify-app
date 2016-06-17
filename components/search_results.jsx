@@ -1,5 +1,5 @@
 var React = require('react');
-var Artist = require('./artist.js');
+var Artist = require('./artist.jsx');
 
 /**
  * A component to handle the results return from the search.

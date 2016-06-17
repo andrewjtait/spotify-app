@@ -1,6 +1,6 @@
 var React = require('react');
-var SearchForm = require('./search_form.js');
-var SearchResults = require('./search_results.js');
+var SearchForm = require('./search_form.jsx');
+var SearchResults = require('./search_results.jsx');
 
 /**
  * A composition of components to create a UI to find artists.

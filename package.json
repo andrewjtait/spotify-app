@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "browserify": "browserify components/app-browser.js -o public/javascripts/app.js",
-    "watchify": "watchify components/app-browser.js -o public/javascripts/app.js",
+    "browserify": "browserify components/app-browser.jsx -o public/javascripts/app.js",
+    "watchify": "watchify components/app-browser.jsx -o public/javascripts/app.js",
     "debug": "npm run watchify & node debug ./bin/www",
     "start": "npm run watchify & node ./bin/www",
-    "test:debug": "mocha --compilers js:babel/register --recursive debug",
-    "test:watch": "mocha --compilers js:babel/register --recursive -w",
-    "test": "istanbul cover _mocha -- --compilers js:babel/register --recursive",
+    "test:debug": "mocha --compilers jsx:babel/register --recursive debug",
+    "test:watch": "mocha --compilers jsx:babel/register --recursive -w",
+    "test": "istanbul cover _mocha -- --compilers jsx:babel/register --recursive",
     "posttest": "istanbul check-coverage"
   },
   "dependencies": {

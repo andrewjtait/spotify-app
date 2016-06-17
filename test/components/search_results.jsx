@@ -1,8 +1,8 @@
-var Component = require('../../components/search_results.js');
+var Component = require('../../components/search_results.jsx');
 
 var React = require('react/addons');
 var TestUtils = React.addons.TestUtils;
-var Artist = require('../../components/artist.js');
+var Artist = require('../../components/artist.jsx');
 
 describe('Search Results component', function() {
   beforeEach(function() {
